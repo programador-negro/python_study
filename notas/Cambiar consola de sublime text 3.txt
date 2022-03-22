@@ -1,0 +1,18 @@
+Cambiar consola de sublime text 3
+1. ir a:
+	 tools >build system >new build system... >
+2. borrar, pegar y guardar lo siguiente:
+
+{
+    "cmd": ["start", "cmd", "/k", "c:/python27/python.exe", "$file"],
+    "selector": "source.python",
+    "shell": true,
+    "working_dir": "$file_dir"
+}
+
+IMPORTANTE: colocar la ruta espefifica donde se encuentra 'python.exe'
+generalmente es esta:
+
+C:\Users\user\AppData\Local\Programs\Python\Python38\python.exe
+
+https://chat.whatsapp.com/KEndS6Y0mff9elJCd3T5kL

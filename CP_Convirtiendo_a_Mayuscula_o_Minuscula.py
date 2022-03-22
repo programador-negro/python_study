@@ -1,0 +1,10 @@
+# Convertir strings enn minisculas o mayusculas
+print("escribe algo en mayuscula.")
+pal=input("r: ")
+paltwo=pal.lower()
+print(paltwo+" - el texto ahora esta en  minisculas")
+print("- - - - - -")
+print("escribe algo en minisculas.")
+pala=input("r: ")
+palatwo=pala.upper()
+print(palatwo+" - el texto ahora esta en mayusculas")

@@ -1,0 +1,11 @@
+CREAR INSTALADOR DE ARCHIVOS Python:
+
+descargar pyinstallar: pip install pyinstaller
+
+1. <colocar el directorio> + pyinstaller nombre_del_archivo.py
+
+2. <colocar el directorio> + pyinstaller --windowed --onefile --icon=./logo.ico nombre_del_archivo.py
+
+--windowed => permite que solo se ejecute el programa con la interfaz sin la consola de fondo.
+--onefile => permite que se cree todo en un solo archivo ejecutable.
+--icon= ruta+nombre_del_icono => permite establecer un icono al archivo ejecutable.

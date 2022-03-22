@@ -1,0 +1,19 @@
+Caracteristicas de Python.
+---------------------------------------
++ creado por Guildo Van Rossum a coienzos de los 90.
+
++ lenguaje de alto nivel(significa que se asemeja al lenguage natural que se habla y escribe como el ingles), gramatica sencilla, clara, muy legible.
+
++ Tipado dinamico (significa que establece el tipo de variable de manera rapida, es decir lo establece durante  la ejecucion del codigo.)y fuerte (significa que hace una distincion rapida entre los tipos de varibles)
+
++ el logo  de python proviene de un grupo musical gustado por el creador.
+
++ Open source
+
++ facil de aprender. (por ejemplo si sabes ingles es aun mas facil).
+
++ Libreria estandar muy amplia.
+
++ es un lenguaje de programacion Interpretado.
+
++ es Versatil. (aplicaciones de escritorio, aplicaciones de servidor, aplicacioones web)

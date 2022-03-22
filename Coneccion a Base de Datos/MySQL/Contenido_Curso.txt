@@ -1,0 +1,76 @@
+ suContenido del curso SQL
+
+que es una base de datos:
+Una base de datos es un conjunto de datos pertenecientes a un mismo contexto y almacenados sistemáticamente para su posterior uso. 
+
+Sentencias basicas:
+
+mysql -h localhost -u root -p
+
+create database (nombre de la base datos);
+show databases;
+use database (nombre_de_la_base_datos);
+drop database (nombre_de_la_base_datos);
+
+Consultar columnas todas las columnas de una tabla:
+	
+	// seleccionar primero base de datos
+use (nombre_de_DB);
+	// esccribir ccomando para consultar
+select * from (nombre_de_tabla);
+---------------------
+Crear una tabla::
+
+// seleccionar primero la base de datos.
+
+use (nombre de base de datos);
+CREATE TABLE (nombre de tabla)
+	//escribir datos de la tabla
+--------------------
+Eliminar una tabla::
+
+drop table (nombre de la tabla);
+--------------------
+Modificar tablas::
+
+ALTER TABLE (nombre_de_tabla) RENAME TO (nombre_nuevo_de_tabla);
+--------------------
+Cambiar nombre de una columna::
+
+ALTER TABLE nombre_de_tabla CHANGE nombre_de_columna  nombre_nuevo_de_columna tipo_de_dato(n° de caracteres) ;
+--------------------
+Modificar columa sin cambiar nombre::
+
+ALTER TABLE nombre_de_tabla MODIFY nombre_de_columna (escribir el dato o valor a cambiar,ej: varchar(15) null o int(12) not null, etc)
+--------------------
+Añadir nueva columna a una tabla::
+
+ALTER TABLE nombre_de_table ADD nombre_de_nueva_columna tipo_de_dato;
+--------------------
+Añadir restriccion a columna::
+
+	//ejemplo con columna 'email'
+
+ALTER TABLE nombre_de_tabla ADD CONSTTRAINT uq_email UNIQUE(email);
+--------------------
+Borrar una columna::
+
+ALTER TABLE nombre_de_tabla DROP nombre_de_columna;
+
+---------------------------------------------------
+Consulta con condicionales::
+    OPERADORES DE COMPARACION:
+      igual                 =
+      distinto              !=
+      menor                 <
+      mayor                 >
+      menor o igual         <=
+      mayor o igual         >=
+      entre                 between
+      en                    in
+      es nulo               is null
+      no nulo               is not null
+      como                  like
+      no es como            not like
+      
+

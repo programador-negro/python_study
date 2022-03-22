@@ -1,0 +1,140 @@
+# Apuntes sobre python:
+
+STRINGS:
+
+		\n -> permite hacer saltos de linea dentro de un string
+			ejemplo: print(\n hola).
+
+		.strip() -> elimina espacios en blanco que sobran a ambos lados de un string.
+			ejemplo: variable.strip()
+
+		.rstrip() -> elimina espacios en blanco que sobran al lado derecho(right) de un string.
+			ejemplo: variable.rstrip()
+
+		.lstrip() -> elimina espacios en blanco que sobran al lado izquierdo (left) de un string.
+			ejemplo: variable.lstrip()
+
+LISTAS o LIST:
+
+		variable = ["elemento",0]
+
+		.append("elemento") -> agrega elemento al final de una lista.
+
+		.insert(0,"elemento") -> agrega un elemento en la posicion indicada.
+
+		del variable[0] -> elimina el elemento en dicha posicion.
+
+		popvariable = variable.pop() -> elimina el ultimo elemento de la lista y almacena en una variable nueva ese elemento eliminado. tambien se puede indicar la posicion del elemento dentro de pop().
+
+		.remove(variable_con_nombre_del_elemento) -> elimina el elemento especificado.
+
+		.sort() -> ordena una lista alfabeticamente de menor a mayor
+		.sort(reverse=True) -> reversa una lista ordenada de mayor a menor.
+		sorted(nombrelista) -> crea que un tipo de copia ordenada de la lista sin afectar su orden real
+		set(nombrelista) -> imprime todos los valores sin repeticiones.
+		.reverse() -> reversa una lista.
+
+
+		Imprimir secmentos de listas:
+
+		lista[:] -> almacena y/o muestra todo el contenido de la lista.
+		lista [4:] -> almacena y/o muestra todo el contenido de la lista desde el elemto cuatro hasta el final.
+
+TUPLAS:
+			nota: las tuplas no se pueden modificar despues de ser creadas.
+		tupla = (1,2,3)
+
+DICCIONARIOS:
+
+		vardiccionario = {"uno":1, "dos":2}
+
+		vardiccionario["tres"]=3 -> asi se agreda un nuevo elemento o clave+valor
+
+		for key, value in vardiccionario.items(): 
+			print("key: "+key)
+			print("value: "+value)
+			-> esto permite recorrer el diccionario e imprimir las claves y valores, key , value pueden nombrarse de otras formas que se quiera.
+
+
+SENTENCIAS:
+	 if: .. else:
+	 if: .. elif: ... else:
+
+	 if .. in .. : -> IN valida si existe un elemento en otro.
+	 if .. not in .. : -> NOT IN valida si no existe un elemento en otro.
+
+	 if .. : valida si un elemento existe o no.
+
+FUNCIONES:
+
+	def miFuncion(nombre, apellido="perez"): -> en una funcion se puede predefinir valores por defecto.
+	print(miFuncion(jack)) => esto imprimiria, jack perez.
+	Otras Funciones:
+
+	.title() -> imprime un string con la primera letra en mayuscula.
+	min(variable) -> imprime el valor minimo.
+	max(variable) -> imprime el valor maximo
+	sum(variable) -> imprime la suma de todos los valores.
+	.lower() -> convierte texto a minuscula.
+	.upper() -> convierte texto a mayuscula.
+	credits() -> imprime los creditos a loscreadores de python.
+
+	id(variable) -> devuelve la identidad de un objecto. Esto garantiza ser el único entre objetos simultáneamente existentes. (Sugerencia: es la dirección de memoria del objeto).
+
+	bin(variablenumerica)-> Devuelve una representación binaria de un número entero o entero long, es decir, lo convierte de entero a binario.
+
+	float(variablenumerica) -> La función float() devuelve un número coma flotante float. 
+
+	int(variable) -> La función int() devuelve un número entero. También puede convertir una cadena de caracteres a un número entero.
+
+	pow(varnum, varnum)-> La función pow() si recibe dos (02) argumentos, eleva el primero argumento a la potencia del segundo argumento.
+	round(var)-> La función round() redondea un número flotante a una precisión dada en dígitos decimal.
+
+	startswith()-> La función startswith() devuelve un valor booleano True o False si coincide que la cadena inicie con el criterio enviado por parámetros en la función.
+
+	endswith()-> La función endswith() devuelve un valor booleano True o False si coincide que la cadena termine con el criterio enviado por parámetros en la función.
+			ejemplo: >>> 'leonardo caballero'.endswith("do")
+							False
+
+	chr(varnum)-> La función chr() recibe como argumento un entero, y devuelve una cadena con el carácter cuyo código Unicode corresponde a ese valor. El rango válido para el argumento es de 0 a 256.
+			ejemplo: >>> chr(64)
+						'@'
+	ord()-> La función ord() es el inverso de chr() dada una cadena representando un carácter Unicode, devuelve el entero del código correspondiente.
+
+	var.isalnum()-> La función isalnum() devuelve un valor booleano True o False si coincide que la cadena contenga caracteres alfanuméricos.
+
+	var.isalpha()-> La función isalpha() devuelve un valor booleano True o False si coincide que la cadena contenga caracteres alfabéticos.varnun
+
+	var.isdigit()-> La función isdigit() devuelve un valor booleano True o False si coincide que la cadena contenga caracteres dígitos.
+
+	var.islower()-> La función islower() devuelve un valor booleano True o False si coincide que la cadena contenga caracteres en MINÚSCULAS.
+
+	var.isupper()-> La función isupper() devuelve un valor booleano True o False si coincide que la cadena de caracteres estén en MAYÚSCULAS en cada palabra.
+
+	var.istitle()-> La función istitle() devuelve un valor booleano True o False si coincide que la cadena de caracteres sean capitales en cada palabra.
+
+	var.isspace()-> La función isspace() devuelve un valor booleano True o False si no es vacía, y todos sus caracteres son espacios en blanco.
+
+	isinstance(varObjeto, nombreClase)-> devuelve un valor booleano True o False si el el objeto es una instancia de la clase mencionada.
+
+	super().otraFuncion()-> sirve para incluir funciones de clases padres en clases hijas. 
+
+
+
+CAMBIAR COLOR DE SALIDAS POR CONSOLAS:
+	# instalar colorama.
+	# agregar al codigo fuente:ejemplo:
+		from colorama import Fore, Style, Back, init
+		init() # colocar init para que se inicie la funcion.
+		print(Fore.RED +"Hola")
+
+	# colores disponibles: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE.
+	# Fore -> cambia el color de letra.
+	# Back -> cambia el color de fondo.
+	# Style.DIM -> oscurece el color de letra
+	# Style.NORMAL -> muestra todo de letra normal
+	# Style.BRIGHT -> aclara el color de letra.
+
+EXAMENES DE PRACTICA:
+
+https://cibertest.com/test-examen/13/python

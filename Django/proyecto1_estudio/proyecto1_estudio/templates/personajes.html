@@ -1,0 +1,57 @@
+<html>
+	<head>
+	<title>Rick and Morty World</title>	
+	</head>
+	<body>
+{% include "menu.html" %}
+		<h1 style = "font-family: 'Arial'; "><b>Rick and Morty - Characters</b></h1>
+		<div id = "cuerpo">
+		<div class="disposicion" >
+		
+		{% for personaje in contenido.results %}
+			<div class="card" >
+		  	<img src={{personaje.image}} alt="personaje-imagen" >
+		  	<div class="container">
+		  	<h4><b>{{ personaje.name }}</b></h4>
+			<p>Status: {{ personaje.status }}</p>
+			<p>gender: {{ personaje.gender }}</p>
+		  	<p>planet: {{ personaje.location.name }}</p>
+  			</div>
+			</div>
+		{% endfor %}
+		
+	</div>
+</div>		
+	</body>
+	<style>
+#cuerpo{
+	background-color: darkred;
+}
+p {
+	font-family: Helvetica, sans-serif;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+border-radius: 10px 10px;
+  width:300px; 
+  margin: 5%;
+}
+.disposicion {
+	display: grid; 
+	/* numero y tamaño de columnas del grid */
+	grid-template-columns: 320px 320px 320px 320px; 
+}
+.card {
+	background: black;
+	color: white;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.container {
+  padding: 2px 16px;
+}
+	</style>
+</html>
+	
